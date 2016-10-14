@@ -1,0 +1,7 @@
+GET / controllers.Application.index
+
+GET /lookup/trs/:query  controllers.Application.lookup(query: String, usePOJ: Boolean=false)
+
+GET /lookup/poj/:query  controllers.Application.lookup(query: String, usePOJ: Boolean=true)
+
+GET /ime/$context<[^/]*>/$query<.{0,30}>   controllers.Application.ime(query: String, context: String, usePOJ: Boolean=true)
